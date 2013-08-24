@@ -1,0 +1,8 @@
+---
+layout: page
+title: "articles"
+date: 2013-08-24 12:05
+comments: true
+sharing: true
+footer: true
+---
