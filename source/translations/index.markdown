@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "books"
+title: "translations"
 date: 2013-08-24 12:05
 comments: true
 sharing: true
