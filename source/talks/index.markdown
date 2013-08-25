@@ -2,8 +2,10 @@
 layout: page
 title: "talks"
 date: 2013-08-24 11:55
-comments: true
+comments: false
+hero_unit: true
 sharing: true
+sidebar: false
 footer: true
 ---
 * [『オブジェクト指向エクササイズのススメ』](http://www.slideshare.net/yojik/ss-1033616), [Developers Summit 2009～つなぐ、つながる、そして未来へ～](http://codezine.jp/devsumi/2009/)

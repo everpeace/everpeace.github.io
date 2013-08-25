@@ -10,10 +10,6 @@
     </small>
     {% endif %}
   </h1>
-  <ul id="gh_repos" class="divided">
-    <li class="loading">
-      <i class="icon-spinner icon-spin"></i>
-    </li>
-  </ul>
+  {% include asides/github_repolist.html %}
 </section>
 {% endif %}

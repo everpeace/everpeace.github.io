@@ -2,7 +2,9 @@
 layout: page
 title: "articles"
 date: 2013-08-24 12:05
-comments: true
+comments: false
+hero_unit: true
+sidebar: false
 sharing: true
 footer: true
 ---

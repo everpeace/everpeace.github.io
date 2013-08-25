@@ -7,6 +7,10 @@ is_post: true
   {% include blog/post/article.html %}
 </article>
 
+{% unless page.facebook_like == false %}
+<div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-width="450" data-show-faces="true" data-send="true"></div>
+{% endunless %}
+
 {% if site.disqus_short_name and page.comments == true %} 
 <section id="disqus">
   <h1 class="indent title">Comments</h1>

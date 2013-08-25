@@ -49,6 +49,45 @@ is_homepage: true
           <p>Ocaml, Clojure</p>
           <h3>Used in the past</h3>
           <p>C,  C++,  PHP,  perl</p>
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
+      <div class="grid">
+        <div class="grid__item one-whole lap-one-third">
+          <span class="icon">
+            <i class="icon-user"></i>
+          </span>
+        </div>
+
+        <div class="grid__item one-whole lap-two-thirds">
+          <h2 class="title">MeRIs</h2>
+          <hr>
+          <section class="social">
+            {% include asides/social_list.html %}
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
+      <div class="grid">
+        <div class="grid__item one-whole lap-one-third">
+          <span class="icon">
+            <i class="icon-github"></i>
+          </span>
+        </div>
+
+        <div class="grid__item one-whole lap-two-thirds">
+          <h2 class="title">Repos</h2>
+          <hr>
+          {% if site.github_user %}
+          <section id="github-repos" style="text-align:left" class="aside-module grid__item one-whole lap-one-half">
+            {% include asides/github_repolist.html %}
+          </section>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -62,13 +101,32 @@ is_homepage: true
         </div>
 
         <div class="grid__item one-whole lap-two-thirds">
-          <h2 class="title">Social Infulences</h2>
+          <h2 class="title">Social Infulence</h2>
           <hr>
+          <section>
           <h3>Klout Score</h3>
-          <iframe src="http://widgets.klout.com/badge/everpeace" style="border:0" scrolling="no" allowTransparency="true" frameBorder="0" width="200px" height="120px"></iframe></center>
+          {% include asides/klout_badge.html %}
+          </section>
+          <section>
+            <h3>Coderwall Badges</h3>
+            {% include asides/coderwall_badges.html %}
+          </section>
+        </div>
+      </div>
+    </div>
 
-          <h3>Coderwall Badges</h3>
-          <section style="margin-bottom:30px;" class="coderwall" data-coderwall-username="everpeace" data-coderwall-orientation="horizontal"></section>
+    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
+      <div class="grid">
+        <div class="grid__item one-whole lap-one-third">
+          <span class="icon">
+            <i class="icon-twitter"></i>
+          </span>
+        </div>
+
+        <div class="grid__item one-whole lap-two-thirds">
+          <h2 class="title">Recent Tweets</h2>
+          <hr>
+          {% include asides/twitter_widget.html %}
         </div>
       </div>
     </div>
