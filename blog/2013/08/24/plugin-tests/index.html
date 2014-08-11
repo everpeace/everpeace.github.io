@@ -1,0 +1,459 @@
+
+
+<!doctype html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>plugin tests - My Favorite Abstracts</title>
+    <meta name="author" content="Shingo Omura">
+    
+    <meta name="description" content="plugin tests Comments This is a sample post for testing plugins. H1 H2 H3 list
+list
+nlist
+nlist backtick code block def isBigGang(x: Int): (Boolean &hellip;">
+    
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="canonical" href="http://everpeace.github.io/blog/2013/08/24/plugin-tests">
+    <link href="/favicon.png" rel="icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
+    <link href="/atom.xml" rel="alternate" title="My Favorite Abstracts" type="application/atom+xml">
+    <link href="http://coderwall.com/stylesheets/jquery.coderwall.css" media="all" rel="stylesheet" type="text/css">
+  </head>
+
+
+  <body >
+    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+    <header>
+      <div class="grid-wrapper">
+  <div class="grid">
+
+    <div class="grid__item two-fifths lap-four-sixths palm-one-whole">
+      <a href="/" class="site-title">My Favorite Abstracts</a>
+    </div>
+
+    <div class="grid__item three-fifths lap-two-sixths palm-one-whole">
+      <nav>
+        <input type="checkbox" id="toggle">
+<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu"></label>
+<ul class="menu pull-right">
+  <li><a href="/">Home</a></li>
+  <li><a href="/translations/">Translations</a></li>
+  <li><a href="/articles/">Articles</a></li>
+  <li><a href="/talks/">Talks</a></li>
+  <li><a href="/blog/">Blog</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+  </div>
+</div>
+    </header>
+
+    
+
+    <div class="grid-wrapper">
+      <div class="grid grid-center">
+        
+        <div class="grid__item two-thirds lap-one-whole palm-one-whole">
+        
+
+          <article class="post">
+  <header>
+  
+  <h1 class="title indent">plugin tests</h1>
+  
+
+  
+  <div class="meta clearfix">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<time class="pull-left" datetime="2013-08-24T15:35:00-07:00" pubdate data-updated="true"><i class="icon-calendar"></i> </time>
+    
+
+
+
+  
+
+    
+      <a class="pull-right" href="#disqus_thread">
+        Comments <i class="icon-comment"></i>
+      </a>
+    
+  </div>
+  
+</header>
+
+
+
+
+  <p>This is a sample post for testing plugins.</p>
+
+<!-- more -->
+
+
+<h1>H1</h1>
+
+<h2>H2</h2>
+
+<h3>H3</h3>
+
+<ul>
+<li>list</li>
+<li><p>list</p></li>
+<li><p>nlist</p></li>
+<li>nlist</li>
+</ul>
+
+
+<h3>backtick code block</h3>
+
+<pre><code class="scala isBigGang.scala">def isBigGang(x: Int): (Boolean, String) =
+         (x &gt; 9, "Compared gang size to 9.")
+</code></pre>
+
+<h3>code block</h3>
+
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>isBigGang.scala </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="n">isBigGang</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="o">(</span><span class="kt">Boolean</span><span class="o">,</span> <span class="kt">String</span><span class="o">)</span> <span class="k">=</span>
+</span><span class='line'>         <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="o">,</span> <span class="s">&quot;Compared gang size to 9.&quot;</span><span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+
+<h3>gist</h3>
+
+<div><script src='https://gist.github.com/4964844.js'></script>
+<noscript><pre><code>import scala.language.higherKinds
+
+// 代数の型クラスの階層があって
+trait Algebra[E]{ def op(e1:E,e2:E):E }
+trait SubAlgebra[E] extends Algebra[E]
+
+// ある代数の型クラスのオブジェクトがあって
+object ConcreteAlgebra extends SubAlgebra[Int]{
+  def op(e1:Int, e2:Int) = e1+e2
+}
+
+// メソッドぽくしたいからOpsトレイトを定義して
+trait AlgebraOps[E]{def op(e:E):E }
+
+// 要素と代数をpimpした値を作ってそこにOpsトレイトをくっつけて
+case class Pimped[E,A[E]&lt;:Algebra[E]](e:E, alg:A[E]) extends AlgebraOps[Pimped[E,A]]{
+  def op(p: Pimped[E, A]) = Pimped(alg.op(e,p.e),alg)
+}
+
+//PimpedとEの双方向の変換を用意して
+//([E:Algebra]じゃないのはPimped[E,Algebra]じゃなくてPimped[E,A]になって欲しいから。)
+implicit def pimp[E, A[E]&lt;:Algebra[E]](e:E)(implicit alg: A[E]):Pimped[E,A] = Pimped(e,alg)
+implicit def unpimp[E, A[E]&lt;:Algebra[E]](p:Pimped[E,A]):E = p.e
+
+// Intに対する代数を注入
+implicit val alg = ConcreteAlgebra
+
+// 3に対してpimpが適用されずエラーになってしまう。なぜ？？
+// error: value op is not a member of Int
+3 op 5
+
+// マニュアルでpimpは適用出来る。5にはちゃんとpimpが適用される。
+// 結果: Pimped(8,ConcreteAlgebra$@52f61f70)
+pimp(3) op 5</code></pre></noscript></div>
+
+
+<h3>code include</h3>
+
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (test.js)</span> <a href='/downloads/code/test.js'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm">sample javascript from xui</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="kc">undefined</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">xui</span><span class="p">,</span>
+</span><span class='line'>    <span class="nb">window</span>     <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">string</span>     <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nb">document</span>   <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">idExpr</span>     <span class="o">=</span> <span class="sr">/^#/</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">tagExpr</span>    <span class="o">=</span> <span class="sr">/&lt;([\w:]+)/</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">slice</span>      <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="p">};</span>
+</span><span class='line'>    <span class="k">try</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">slice</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">nodeType</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>    <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span> <span class="nx">slice</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">ret</span><span class="o">=</span><span class="p">[];</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+</span><span class='line'>        <span class="nx">ret</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span> <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span> <span class="p">};</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">x$</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">xui</span> <span class="o">=</span> <span class="nx">xui</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="k">new</span> <span class="nx">xui</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+
+<h3>jsFiddle</h3>
+
+<iframe style="width: 100%; height: 300px" frameborder="0" seamless="seamless" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light/"></iframe>
+
+
+<h3>blockquote</h3>
+
+<blockquote><p>Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.</p><footer><strong>@allanbranch</strong> <cite><a href='https://twitter.com/allanbranch/status/90766146063712256'>twitter.com/allanbranch/status/&hellip;</a></cite></footer></blockquote>
+
+
+<h3>image</h3>
+
+<p><img src="http://placekitten.com/890/280"></p>
+
+<h3>pull quotes</h3>
+
+<p><span class='pullquote-right' data-pullquote='surround it like this'>
+Surround your paragraph with the pull quote tags. Then when you come to
+the text you want to pull, surround it like this and that&rsquo;s all there is to it.
+</span></p>
+
+<h3>video</h3>
+
+<p><video width='640' height='320' preload='none' controls poster='http://s3.imathis.com/video/zero-to-fancy-buttons.png'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video></p>
+
+
+</article>
+
+<div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://everpeace.github.io/blog/2013/08/24/plugin-tests/" data-via="everpeace" data-counturl="http://everpeace.github.io/blog/2013/08/24/plugin-tests/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-href="http://everpeace.github.io/blog/2013/08/24/plugin-tests/" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+
+ 
+<section id="disqus">
+  <h1 class="indent title">Comments</h1>
+  <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+        
+        </div>
+        
+        
+        <aside id="sidebar" class="grid__item one-third lap-one-whole palm-one-whole">
+          <div class="grid">
+
+  
+<section class="social aside-module grid__item one-whole lap-one-half">
+  <h1 class="title delta">
+    MeRIs
+  </h1>
+  
+<ul class="unstyled">
+    
+    
+    <li><a class="github" href="//github.com/everpeace"><i class="icon-github"></i> Github</a></li>
+    <li><a class="facebook" href="//facebook.com/shingo.omura"><i class="icon-facebook-sign"></i> Facebook</a></li>
+    
+    <li><a class="linkedin" href="//linkedin.com/in/shingoomura"><i class="icon-linkedin-sign"></i> LinkedIn</a></li>
+    <li><a class="pinterest" href="//pinterest.com/everpeace"><i class="icon-pinterest"></i> Pinterest</a></li>
+    
+    <li><a class="twitter" href="//twitter.com/everpeace"><i class="icon-twitter"></i> Twitter</a></li>
+    
+    <li><a class="foursquare" href="//foursquare.com/everpeace"><i class="icon-foursquare"></i> Foursquare</a></li>
+</ul>
+
+</section>
+
+
+
+  <section id="recent-posts" class="aside-module grid__item one-whole lap-one-half">
+  <h1 class="title delta">Recent Posts</h1>
+  <ul class="divided">
+    
+      <li class="post">
+        <a href="/blog/2013/08/24/plugin-tests/">plugin tests</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section id="github-repos" class="aside-module grid__item one-whole lap-one-half">
+  <h1 class="title delta">
+    GitHub Repos
+    
+    <small class="pull-right">
+      <a class="btn" href="//github.com/everpeace" title="@everpeace on GitHub" target="_blank">
+        <i class="icon-external-link"></i>
+      </a>
+    </small>
+    
+  </h1>
+  
+<ul id="gh_repos" class="divided">
+  <li class="loading">
+    <i class="icon-spinner icon-spin"></i>
+  </li>
+</ul>
+
+</section>
+
+
+
+<section id="twitter-posts" class="aside-module grid__item one-whole lap-one-half">
+  <h1 class="title delta">Recent Tweets</h1>
+  
+<a class="twitter-timeline" href="https://twitter.com/" data-widget-id="357008581494730752">@ からのツイート</a>
+
+
+<section id="klout-score" class="aside-module grid__item one-whole lap-one-half">
+  <h1 style="text-align:left" class="title delta">Klout Score</h1>
+  <p>
+ <iframe src="http://widgets.klout.com/badge/everpeace" style="border:0" scrolling="no" allowTransparency="true" frameBorder="0" width="200px" height="120px"></iframe>
+</p>
+</section>
+
+<section id="coderwall-badges" class="aside-module grid__item one-whole lap-one-half">
+<h1 class="title delta">CoderWall Badges</h1>
+
+<section style="margin-bottom:30px;" class="coderwall" data-coderwall-username="everpeace" data-coderwall-orientation="horizontal"></section>
+
+</section>
+
+
+</div>
+
+        </aside>
+        
+      </div>
+    </div>
+    
+    <footer>
+      <div class="grid-wrapper">
+  <div class="grid">
+    <div class="grid__item">
+      <p class="copyright">
+        All content by Shingo Omura and licenced under <a href="//creativecommons.org/licenses/by-nc-sa/3.0/ie/">Creative Commons</a>.<br>
+        Code under <a href="//github.com/coogie/oscailte/blob/master/README.md">MIT Licence</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+<script defer src="/javascripts/octopress.js"></script>
+
+
+
+
+<script>
+  var disqus_shortname = 'myfavoriteabstracts';
+  
+    
+    // var disqus_developer = 1;
+    var disqus_identifier = 'http://everpeace.github.io/blog/2013/08/24/plugin-tests/';
+    var disqus_url = 'http://everpeace.github.io/blog/2013/08/24/plugin-tests/';
+    var disqus_script = 'embed.js';
+  
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+<script>
+  $(document).ready(function(){
+    if (!window.jXHR){
+      var jxhr = document.createElement('script');
+      jxhr.type = 'text/javascript';
+      jxhr.src = '/javascripts/libs/jXHR.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jxhr, s);
+    }
+
+    github.showRepos({
+      user: 'everpeace',
+      count: 6,
+      skip_forks: true,
+      target: '#gh_repos'
+    });
+  });
+</script>
+<script src="/javascripts/github.js"></script>
+
+
+<script src="http://coderwall.com/javascripts/jquery.coderwall.js"></script>
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
