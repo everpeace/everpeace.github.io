@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://everpeace.github.io/sitemap.xml 
